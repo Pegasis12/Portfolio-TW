@@ -3,24 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind valores Arbitrários</title>
+    <title>Grid Tailwind</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="m-8">
-    <!-- valores Arbitrários são colocados com no valor [] exemplo text-[cor] e h-[medida] 
-     caso a medida seja usada constantemente o ideal é confirar no tailwind aquele valor -->
-    <h1 class="text-[#B480F4] bg-black h-[50vh]">CliChat</h1>
-    <!-- posso usar até mesmo calc n pode ter espaço errado(calc(500px - 100px)) corret(calc(500px-100px))-->
-    <h1 class="text-[#fff] bg-[red] w-[calc(500px-100px)]">CliChat</h1>
+    <!-- para se criar uma grid se usa a classe grid, e grid-cols-numero de colunas ja grid-rows-numero de linhas. gap se usa gap-valor, lembrando que ele tem as mesma propiedade que a maioria das classes como gap-b-valor que é gap para baixo etc. -->
+    <!-- se eu quiser pintar o fundo de todas as divs sem ter q ficar colocando a classe toda hora eu posso usar um modficador *:bg-gray-500 *:p-4 coloca o *: e a classe a frente-->
+    <div class="grid grid-cols-3 gap-4 *:bg-gray-500 *:p-4">
+      <div>item 1</div>
+      <div>item 2</div>
+      <div>item 3</div>
+    </div>
 
-    <!-- posso usar variaveis tbm -->
-    <style>
-      html {
-        --positivo: #2e0;
-      }
-    </style>
-    <!-- não precisa declarar no puro css com var(--positivo) o tailwind entende -- como uma variavel e já interpreta -->
-     <!-- posso usar sombra com valores arbritaveis tbm, primeiro e segundo valor x e y, terceiro valor blur, quarto valor aumento do blur hadow-[x_y_blur_tamanho_cor] -->
-    <h1 class="p-8 mt-4 text-[--positivo] bg-[#e7e7e7] w-[500px] shadow-[0px_4px_4px_4px_rgba(0,0,0,0.25)]">CliChat</h1>
+    <!-- O grid cols se cria 1fr automatico, sendo necessario usar valores Arbitrarios caso seu layout n seja 1fr lembrando que n pode da espaço-->
+    <div
+      class="grid grid-cols-[minmax(0,300px)_1fr] gap-4 *:bg-yellow-500 *:p-4 mt-8"
+    >
+      <div>item 1</div>
+      <div>item 2</div>
+      <div>item 3</div>
+    </div>
+
+    <!--grid item,  podemos por exemplo sxpandir um elemento com col-span-full que ocupa todas as colunas como se fosse 1/-1 ja col-span-2 vai até a segunda coluna, expandir pra linha de baixo row-span-2-->
+    <div class="grid grid-cols-3 gap-4 *:bg-purple-500 *:p-4 mt-8">
+      <div class="col-span-full">item 1</div>
+      <div class="col-span-2 row-span-2">item 2</div>
+      <div>item 3</div>
+      <div>item 4</div>
+    </div>
+
+    <!-- col-start-2 o item começa na segunda coluna por exemplo e assim para row tbm-->
+    <div class="grid grid-cols-3 gap-4 *:bg-red-500 *:p-4 mt-8">
+      <div class="col-start-2">item 1</div>
+      <div class="col-start-3 row-start-3">item 2</div>
+      <div>item 3</div>
+      <div>item 4</div>
+    </div>
   </body>
 </html>
