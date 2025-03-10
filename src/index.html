@@ -6,67 +6,27 @@
     <title>Tailwind CSS</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <!-- bg-{cor}-{intensidade} e text-{cor}-{intensidade} definem a cor de fundo e a cor do texto, respectivamente.
-  - "cor" representa o nome da cor (ex: gray, sky, yellow).
-  - "intensidade" é o número que define a tonalidade dessa cor (quanto maior, mais intensa).-->
-    <div class="bg-gray-300">Normal</div>
-    <div class="bg-sky-200 text-sky-900 w-16 h-24">Normal</div>
-    <div class="bg-yellow-400 size-36">Normal</div>
-
-    <!-- Cores "text-white" e "text-black" não exigem intensidade, pois são valores fixos.-->
-    <div class="bg-green-900 text-white w-1/2">Normal</div>
-
-    <!-- w-{valor} define a largura do elemento.
-  - "w-1/2" ocupa 50% da largura do contêiner pai.
-  - Para 33%, usamos "w-1/3", para 25% "w-1/4" e assim por diante.-->
-    <div class="bg-green-900 text-white w-1/2">Normal</div>
-
-    <!-- Margens (m) e espaçamentos internos (p - padding)
-  - "mt-4" adiciona margem superior de 16px.
-  - "mb-4" adiciona margem inferior de 16px.
-  - "m-auto" centraliza horizontalmente o elemento.
-  - "-mb-4" aplica uma margem inferior negativa de 16px.-->
-    <div class="bg-gray-300">Normal</div>
-    <div class="bg-sky-200 text-sky-900 w-16 h-24 mt-10 mx-auto">Normal</div>
-
-    <!-- Atalhos para margens:
-  - "my-4" adiciona margem de 16px acima e abaixo.
-  - "mx-4" adiciona margem de 16px à esquerda e à direita.
-  - "m-4" adiciona 16px de margem em todos os lados.
-  - "mx-auto" centraliza ao meio-->
-    <div class="bg-yellow-400 size-36 my-4">Normal</div>
-    <div class="bg-green-900 text-white w-1/2 m-4">Normal</div>
-
-    <!-- Espaçamento interno (padding):
-  - "p-4" aplica 16px de padding em todos os lados.
-  - "pt-4" adiciona padding no topo.
-  - "pb-4" adiciona padding na parte inferior.
-  - "px-4" adiciona padding horizontalmente (esquerda e direita).
-  - "py-4" adiciona padding verticalmente (topo e base).-->
-    <div class="bg-purple-900 text-white w-1/2 m-4 p-8">Normal</div>
-
-    <!--  Bordas no Tailwind:
-  - "border-{espessura}" adiciona uma borda em todos os lados.
-  - "border-t-{espessura}" adiciona borda apenas no topo.
-  - "border-b-{espessura}" adiciona borda apenas na parte inferior.
-  - "border-x-{espessura}" adiciona bordas nas laterais (esquerda e direita).
-  - "border-y-{espessura}" adiciona bordas superior e inferior.
-  - Apenas "border" cria uma borda fina padrão de 1px com uma cor suave.
-  As cores da borda são definidas com "border-{cor}-{intensidade}".-->
-    <div
-      class="bg-yellow-400 text-black w-1/2 m-4 p-4 border-t-4 border-purple-950"
-    >
-      JavaScript
+  <body class="p-8">
+    <div class="text-4xl border-y py-3 border-slate-400">
+      <h1>Curriculum</h1>
+    </div>
+    
+    <div class="mt-5">
+      <h2 class="text-2xl mb-4">Habilidades</h2>
+      <ul class="w-80">
+        <li class="border-l-4 border-purple-700 p-4 bg-slate-200 mb-2">HTML</li>
+        <li class="border-l-4 border-purple-700 p-4 bg-slate-200 mb-2">CSS</li>
+        <li class="border-l-4 border-purple-700 p-4 bg-slate-200 mb-2">JavaScript</li>
+      </ul>
     </div>
 
-    <!-- Por padrão, o Tailwind utiliza o "box-sizing: border-box", o que significa que:
-  - Quando você adiciona padding e borda a um elemento, essas propriedades são incluídas no tamanho total do elemento.
-  - Ou seja, o padding e a borda não aumentam a largura ou altura do elemento, ele mantém o tamanho especificado. para voltar ao padrão existe o comando de box-content que volta a somar os valores -->
-    <div
-      class="box-content h-16 bg-purple-400 pt-4 border-b-8 border-green-600 mb-8"
-    >
-      HTML
+    <div class="mt-5">
+      <h2 class="text-2xl mb-4">Línguas</h2>
+      <ul class="w-80">
+        <li class="border-l-4 border-purple-700 p-4 bg-slate-300">HTML</li>
+        <li class="border-l-4 border-purple-700 p-4 bg-slate-200 ml-2">CSS</li>
+        <li class="border-l-4 border-purple-700 p-4 bg-slate-100 ml-4">JavaScript</li>
+      </ul>
     </div>
   </body>
 </html>
