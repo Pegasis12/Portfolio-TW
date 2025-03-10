@@ -3,36 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind CSS</title>
+    <title>Tailwind valores Arbitrários</title>
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body class="p-8">
-    <div class="text-4xl border-y py-3 border-slate-400">
-      <h1>Curriculum</h1>
-    </div>
+  <body class="m-8">
+    <!-- valores Arbitrários são colocados com no valor [] exemplo text-[cor] e h-[medida] 
+     caso a medida seja usada constantemente o ideal é confirar no tailwind aquele valor -->
+    <h1 class="text-[#B480F4] bg-black h-[50vh]">CliChat</h1>
+    <!-- posso usar até mesmo calc n pode ter espaço errado(calc(500px - 100px)) corret(calc(500px-100px))-->
+    <h1 class="text-[#fff] bg-[red] w-[calc(500px-100px)]">CliChat</h1>
 
-    <div class="mt-5">
-      <h2 class="text-2xl mb-4">Habilidades</h2>
-      <ul class="w-80">
-        <li class="border-l-4 border-purple-700 p-4 bg-slate-200 mb-2">HTML</li>
-        <li class="border-l-4 border-purple-700 p-4 bg-slate-200 mb-2">CSS</li>
-        <li class="border-l-4 border-purple-700 p-4 bg-slate-200 mb-2">
-          JavaScript
-        </li>
-      </ul>
-    </div>
-
-    <div class="mt-5">
-      <h2 class="text-2xl mb-4">Línguas</h2>
-      <ul class="w-80">
-        <li class="border-l-4 border-purple-700 pl-8 py-4 bg-slate-300">Português</li>
-        <li class="border-l-4 border-purple-700 pl-6 py-4 bg-slate-200 -mt-1 ml-2">
-          Inglês
-        </li>
-        <li class="border-l-4 border-purple-700 pl-4 py-4 bg-slate-100 -mt-1 ml-4">
-          Espanhol
-        </li>
-      </ul>
-    </div>
+    <!-- posso usar variaveis tbm -->
+    <style>
+      html {
+        --positivo: #2e0;
+      }
+    </style>
+    <!-- não precisa declarar no puro css com var(--positivo) o tailwind entende -- como uma variavel e já interpreta -->
+     <!-- posso usar sombra com valores arbritaveis tbm, primeiro e segundo valor x e y, terceiro valor blur, quarto valor aumento do blur hadow-[x_y_blur_tamanho_cor] -->
+    <h1 class="p-8 mt-4 text-[--positivo] bg-[#e7e7e7] w-[500px] shadow-[0px_4px_4px_4px_rgba(0,0,0,0.25)]">CliChat</h1>
   </body>
 </html>
