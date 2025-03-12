@@ -3,41 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid Tailwind</title>
+    <title>Início</title>
     <link href="./output.css" rel="stylesheet" />
+    <!-- link material icons google -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
   </head>
-  <body class="m-8">
-    <!-- para se criar uma grid se usa a classe grid, e grid-cols-numero de colunas ja grid-rows-numero de linhas. gap se usa gap-valor, lembrando que ele tem as mesma propiedade que a maioria das classes como gap-b-valor que é gap para baixo etc. -->
-    <!-- se eu quiser pintar o fundo de todas as divs sem ter q ficar colocando a classe toda hora eu posso usar um modficador *:bg-gray-500 *:p-4 coloca o *: e a classe a frente-->
-    <div class="grid grid-cols-3 gap-4 *:bg-gray-500 *:p-4">
-      <div>item 1</div>
-      <div>item 2</div>
-      <div>item 3</div>
-    </div>
-
-    <!-- O grid cols se cria 1fr automatico, sendo necessario usar valores Arbitrarios caso seu layout n seja 1fr lembrando que n pode da espaço-->
-    <div
-      class="grid grid-cols-[minmax(0,300px)_1fr] gap-4 *:bg-yellow-500 *:p-4 mt-8"
+  <body class="flex bg-[#171717] justify-center min-h-screen">
+    <!-- Barra lateral fixa -->
+    <aside
+      class="w-52 h-screen fixed left-0 top-0 rounded-lg bg-neutral-800 p-6 shadow-xl mt-2 ml-2"
     >
-      <div>item 1</div>
-      <div>item 2</div>
-      <div>item 3</div>
-    </div>
+      <nav>
+        <div class="mb-8">
+          <h2 class="text-[#D4D4D4] text-xl font-semibold">Informações</h2>
+          <ul
+            class="text-[#D4D4D4] text-lg *:py-2 *:px-4 *:flex *:items-center *:gap-2"
+          >
+            <li><i class="material-symbols-outlined">home</i>Início</li>
+            <li>
+              <i class="material-symbols-outlined">business_center</i>Projetos
+            </li>
+            <li>
+              <i class="material-symbols-outlined">trending_up</i>TimeLine
+            </li>
+            <li><i class="material-symbols-outlined">person</i>Contato</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-[#D4D4D4] text-xl font-semibold">Links</h2>
+          <ul class="text-[#D4D4D4] text-lg *:py-2 *:px-4">
+            <li>GitHub</li>
+            <li>Discord</li>
+            <li>Instagram</li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
 
-    <!--grid item,  podemos por exemplo sxpandir um elemento com col-span-full que ocupa todas as colunas como se fosse 1/-1 ja col-span-2 vai até a segunda coluna, expandir pra linha de baixo row-span-2-->
-    <div class="grid grid-cols-3 gap-4 *:bg-purple-500 *:p-4 mt-8">
-      <div class="col-span-full">item 1</div>
-      <div class="col-span-2 row-span-2">item 2</div>
-      <div>item 3</div>
-      <div>item 4</div>
-    </div>
+    <!-- Conteúdo principal -->
+    <main class="flex-grow ml-56 mt-12 max-w-[900px] p-6">
+      <section class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-200">
+          Olá! Meu nome é Pablo 👋
+        </h1>
+        <p class="text-lg mt-2 text-gray-300">
+          Sou um Desenvolvedor Front-end de 23 anos com paixão por programação e
+          um forte desejo de continuar aprendendo.
+        </p>
+        <p class="text-lg mt-2 text-gray-300">
+          Cada desafio é uma oportunidade de crescimento para mim, e estou
+          sempre buscando melhorar minhas habilidades técnicas e interpessoais.
+        </p>
+        <p class="text-lg mt-2 text-gray-300">
+          Acredito que a colaboração é essencial para o sucesso.
+        </p>
+      </section>
 
-    <!-- col-start-2 o item começa na segunda coluna por exemplo e assim para row tbm-->
-    <div class="grid grid-cols-3 gap-4 *:bg-red-500 *:p-4 mt-8">
-      <div class="col-start-2">item 1</div>
-      <div class="col-start-3 row-start-3">item 2</div>
-      <div>item 3</div>
-      <div>item 4</div>
-    </div>
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-200">Tecnologias</h2>
+        <p class="text-lg mt-2 text-gray-300">
+          Tecnologias que uso em meus projetos, e que tenho conhecimento.
+        </p>
+
+        <div class="mt-2">
+          <ul
+            class="flex gap-3 items-center flex-wrap *:p-2 *:border *:rounded-md *:border-[#494949] *:bg-[#262626] text-gray-300 text-lg font-medium"
+          >
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Tailwind</li>
+            <li>NodeJs</li>
+            <li>Figma</li>
+            <li>WordPress</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-200">Projetos</h1>
+        <p class="text-lg mt-2 text-gray-300">
+          Projetos que eu estou desenvolvendo atualmente,
+          <span class="underline text-blue-700">ver mais projetos</span>.
+        </p>
+        <div
+          class="mt-4 grid grid-cols-[200px_auto] gap-2 bg-[#262626] rounded-md border border-[#494949]"
+        >
+          <div>
+            <img class="rounded-s-lg" src="./webflux.jpg" alt="" />
+          </div>
+          <div class="pb-6 pt-4 px-4">
+            <h2 class="text-2xl font-semibold mb-1 text-gray-200">WebFlux</h2>
+            <p class="text-gray-300">
+              Soluções modernas em WordPress para destacar sua marca online com
+              design exclusivo e performance otimizada.
+            </p>
+            <!-- <div></div> -->
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
